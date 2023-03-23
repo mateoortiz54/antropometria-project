@@ -1,0 +1,395 @@
+
+
+body{
+  background-image: url('./assets/fondo.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+
+}
+
+.centerVerHor{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.centerHor{
+  position: absolute;
+  bottom: -5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.showInfo{
+  position: fixed;
+  z-index: 4;
+}
+
+.imgInamod{
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+}
+
+.responsive-video{
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.cotainerCardsStones{
+  /*background-color: aqua;*/
+  padding-top: 3%;
+  padding-left: 25%;
+  padding-right: 25%;
+}
+
+#cardStonePI{
+  width: 300px;
+}
+
+#lastCard {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+#containerButton{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  
+}
+
+.tips{
+  position: absolute;                    
+  top: 5%;
+  left: 90%;                                                                            
+  z-index: 4;
+}
+
+
+/*----------------------------------------css cards-------------------------------------------------------------*/
+
+* {
+  box-sizing: border-box;
+}
+#root{
+  width: 100%;
+}
+/* .spaceLeft{
+  width: 20%;
+} */
+/* .spaceRight{
+  width: 20%;
+} */
+.container{
+  display: flex;
+  width: 100%;
+}
+body, html {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  
+}
+
+.spaceFocus{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /*justify-content: center;*/
+  gap: 10px;
+  width: 100%;
+
+}
+
+.wrapperCss {
+  padding-left: 20%;
+  display: flex;
+  width: 90%;
+  justify-content: space-around;
+  gap: 15px;
+  
+}
+
+.card {
+  width: 23%;
+  /*width: 300px;
+  height: 100px;*/
+  border-radius: 15px;
+  padding: 5rem;
+  background: white;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: cen;
+  transition: 0.4s ease-out;
+  box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
+}
+.card:hover {
+  transform: translateY(20px);
+}
+.card:hover:before {
+  opacity: 1;
+}
+.videoCard{
+  display: block;
+  width: 100%;
+  height: 80%;
+  padding: 0%;
+  z-index: 1;
+  transform: translateY(-145px);
+  
+}
+
+.card .videoCard1{
+  display: none;
+  transform: translateY(-145px);
+  /*visibility: hidden;*/
+}
+.card:hover .videoCard1{
+  /*visibility: visible;*/
+  display: block; 
+  width: 100%;
+  height: 80%;
+  padding: 0%;
+  transform: translateY(1px); 
+  transition: 1s;
+  /* z-index: -1; */
+}
+.card:hover .videoCard{
+  display: none;
+}
+/*Div info stone*/
+.card .info {
+  /* display: none; */
+  /*visibility: hidden; */
+  position: relative;
+  z-index: 1;
+  color: black;
+  opacity: 1;
+  transform: translateY(0px);
+  transition: 0.5s;
+}
+.card:hover .info {
+  /*visibility: visible; */
+  display: block;
+  z-index: 3;
+  opacity: 1;
+  transform: translateY(-5px);
+}
+
+.card :before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 15px;
+}
+
+.cardCss .info h1 {
+  margin: 0px;
+}
+.cardCss .info p {
+  letter-spacing: 1px;
+  font-size: 15px;
+  margin-top: 8px;
+}
+.cardCss .info button {
+  padding: 0.6rem;
+  outline: none;
+  border: none;
+  border-radius: 3px;
+  background: white;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+.cardCss .info button:hover {
+  background: dodgerblue;
+  color: white;
+}
+@media (min-width:576px) {
+  .container,
+  .container-sm {
+   max-width:600px
+  }
+  .card{
+    width: 80%;
+  }
+  .spaceLeft{
+    width: 20%;
+  }
+  .spaceFocus{
+    width: 80%;
+  }
+ }
+ @media (min-width:768px) {
+  .container,
+  .container-md,
+  .container-sm {
+   max-width:720px
+  }
+  .card{
+    width: 49%;
+  }
+  .spaceLeft{
+    width: 10%;
+  }
+  .spaceFocus{
+    width: 90%;
+  }
+
+  /* .card .text-info {
+    opacity: 0;
+  }
+  .card:hover .text-info {
+    opacity: 1;
+  } */
+ }
+ @media (min-width:992px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm {
+   max-width:960px
+  }
+  .card{
+    width: 31%;
+  }
+  .spaceLeft{
+    width: 1%;
+  }
+  .spaceFocus{
+    width: 95%;
+  }
+  .videoCard{
+    transform: translateY(-200px);
+  }
+ }
+ @media (min-width:1200px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl {
+   max-width:1140px
+  }
+  .card{
+    width: 30%;
+  }
+  .videoCard{
+    transform: translateY(-150px);
+  }
+  .spaceLeft{
+    width: 10%;
+  }
+ }
+ @media (min-width:1400px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
+   max-width:1320px
+  }
+  .card{
+    width: 24%;
+    margin-bottom: 25px;
+
+  }
+  .spaceLeft{
+    width: 0%;
+  }
+  .spaceFocus{
+    width: 100%;
+  }
+ }
+
+/*---------------------------------------------Termina css de las cards--------------------------------------*/
+.ModalHeader{
+  background-color: antiquewhite;
+}
+.ModalBody{
+  background-color: antiquewhite;
+}
+
+.titleStone{
+  display: flex;
+  justify-content: center;
+  background-color: lawngreen;
+}
+.descModal{
+  display: flex;
+  background-color: black;
+  color: aliceblue;
+  font-size: 20px;
+  justify-content: center;
+}
+.descModal p{
+  margin-left: 20%;
+  margin-right: 20%;
+}
+.porcentajesModal{
+  background-color: brown;
+  width: 20%;
+}
+.imgDesc{
+  display: flex;
+  justify-content: center;
+}
+.imgDesc img{
+  height: 200px;
+  width: 200px;
+}
+
+.grid-container{
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto;
+  background-color: #2196F3;
+  gap: 10px;
+  padding: 10px;
+}
+
+.grid-container div{
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px ;
+  font-size: 30px;
+}
+.item7{
+  /*empieza en la fila 1, termina en la fila 8 (restandole uno), de width empieza en la column 2 y termina 6 (restandole 1)*/
+  grid-area: 1/2/8/6;
+}
+
+
