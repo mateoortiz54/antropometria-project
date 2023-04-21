@@ -1,3 +1,4 @@
+import { Accordion } from "react-bootstrap";
 
 export const ModalInfo = ({information, title}) => {
     
@@ -36,12 +37,17 @@ export const ModalInfo = ({information, title}) => {
   
   return (
     <>
-      <h2 className="titleStone">{infoStoneModal.title}</h2> 
 
-      <div className="descModal">
-        
-          <p>{infoStoneModal.description}</p>
-      </div>
+      <h1 className="titleStone">{infoStoneModal.title}</h1> 
+
+      <Accordion flush>
+        <Accordion.Item style={{ backgroundColor: 'transparent' }} eventKey="0">
+          <Accordion.Header><strong>Descripción</strong> </Accordion.Header>
+          <Accordion.Body style={{ fontSize: '30px' }}>
+            <p>{infoStoneModal.description}</p>
+          </Accordion.Body>
+        </Accordion.Item>
+      </Accordion>
 
       <div className="containerPorcentajes">
         <div className="porcentajes" >
