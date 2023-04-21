@@ -47,7 +47,7 @@ export const ModalInfo = ({information, title}) => {
         <div className="porcentajes" >
           <div className="divBustoCadera">
             <div className="divBusto"> llegue yo Busto: {busto}</div>
-            <div className="divCadera"> Cadera: {cadera}</div>
+            <div className="divCadera"> Ahora llegué yo, Mateo Cadera: {cadera}</div>
           </div>
           
           <div className="divImg">
