@@ -1,4 +1,6 @@
 import { Accordion } from "react-bootstrap";
+import { ButtonModalInfo } from "./modal/ButtonModalInfo";
+
 
 export const ModalInfo = ({information, title}) => {
     
@@ -35,6 +37,11 @@ export const ModalInfo = ({information, title}) => {
       }
   }
   
+
+  const showInfo = () =>{
+    console.log('Funcionó')
+  }
+ 
   return (
     <>
 
@@ -84,7 +91,7 @@ export const ModalInfo = ({information, title}) => {
       </div> */}
 
       
-      <div className="componentCaracteristic" >
+      {/* <div className="componentCaracteristic" >
         
         <button>cadera</button>
         <button>
@@ -94,7 +101,9 @@ export const ModalInfo = ({information, title}) => {
           Cintura
         </button>
 
-      </div>
+      </div> */}
+            
+      <ButtonModalInfo/>
       <ul>
           {
             keysGeneral && (
@@ -157,7 +166,7 @@ export const ModalInfo = ({information, title}) => {
       <ul>
         {
           keysCadera && (
-          <div>
+          <div> 
             <h3>Cadera {infoStoneModal.recomendaciones.cadera.tipo}</h3>
             {keysCadera && (keysCadera.map((value) => 
                 <li key={ value }>{infoStoneModal.recomendaciones.cadera[value]}</li>
@@ -167,6 +176,7 @@ export const ModalInfo = ({information, title}) => {
           )
         } 
       </ul> 
+      
         
     </>)
   }

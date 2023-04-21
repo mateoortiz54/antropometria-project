@@ -122,7 +122,7 @@ body, html {
   
 }
 
-.card {
+.cardStone {
   width: 23%;
   /*width: 300px;
   height: 100px;*/
@@ -136,10 +136,10 @@ body, html {
   transition: 0.4s ease-out;
   box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
 }
-.card:hover {
+.cardStone:hover {
   transform: translateY(20px);
 }
-.card:hover:before {
+.cardStone:hover:before {
   opacity: 1;
 }
 .videoCard{
@@ -152,12 +152,12 @@ body, html {
   
 }
 
-.card .videoCard1{
+.cardStone .videoCard1{
   display: none;
   transform: translateY(-145px);
   /*visibility: hidden;*/
 }
-.card:hover .videoCard1{
+.cardStone:hover .videoCard1{
   /*visibility: visible;*/
   display: block; 
   width: 100%;
@@ -167,11 +167,11 @@ body, html {
   transition: 1s;
   /* z-index: -1; */
 }
-.card:hover .videoCard{
+.cardStone:hover .videoCard{
   display: none;
 }
 /*Div info stone*/
-.card .info {
+.cardStone .info {
   /* display: none; */
   /*visibility: hidden; */
   position: relative;
@@ -181,29 +181,29 @@ body, html {
   transform: translateY(0px);
   transition: 0.5s;
 }
-.card:hover .info {
+.cardStone:hover .info {
   /*visibility: visible; */
   display: block;
   z-index: 3;
   opacity: 1;
   transform: translateY(-5px);
 }
-.card .info p{
+.cardStone .info p{
   display: none;
 }
 
-.card:hover .info p{
+.cardStone:hover .info p{
   display: block;
 }
 .button-info{
   visibility: hidden;
 }
 
-.card:hover .button-info{
+.cardStone:hover .button-info{
   visibility: visible;
 }
 
-.card :before {
+.cardStone :before {
   content: "";
   position: absolute;
   top: 0;
@@ -218,7 +218,7 @@ body, html {
   opacity: 0;
 }
 
-.card img {
+.cardStone img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -257,7 +257,7 @@ body, html {
   .container-sm {
    max-width:600px
   }
-  .card{
+  .cardStone{
     width: 80%;
   }
   .spaceLeft{
@@ -276,7 +276,7 @@ body, html {
   .container-sm {
    max-width:720px
   }
-  .card{
+  .cardStone{
     width: 49%;
   }
   .spaceLeft{
@@ -289,10 +289,10 @@ body, html {
     transform: translateY(-40px);
   } 
 
-  /* .card .text-info {
+  /* .cardStone .text-info {
     opacity: 0;
   }
-  .card:hover .text-info {
+  .cardStone:hover .text-info {
     opacity: 1;
   } */
  }
@@ -303,7 +303,7 @@ body, html {
   .container-sm {
    max-width:960px
   }
-  .card{
+  .cardStone{
     width: 31%;
   }
   .spaceLeft{
@@ -324,7 +324,7 @@ body, html {
   .container-xl {
    max-width:1140px
   }
-  .card{
+  .cardStone{
     width: 30%;
   }
   .videoCard{
@@ -343,7 +343,7 @@ body, html {
   .container-xxl {
    max-width:1320px
   }
-  .card{
+  .cardStone{
     width: 24%;
     margin-bottom: 25px;
 
