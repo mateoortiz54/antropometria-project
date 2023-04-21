@@ -11,7 +11,7 @@ export const CardStone = ({stone}) => {
     const stoneNoAccents = stone.title.normalize("NFD").replace(/[\u0300-\u036f]/g, "")
 
     return (
-        <Card className="card" style={{backgroundColor:"#EAEAEA"}}>
+        <Card className="cardStone" style={{backgroundColor:"#EAEAEA"}}>
             <div className="info" >
                 <h1>{stone.title}</h1>
                 {/*className='text-info'*/}
