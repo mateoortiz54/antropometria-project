@@ -1,8 +1,7 @@
-import React, {Fragment} from "react";
 
-export const TextInitial = () => {
+export const AboutPageText = () => {
   return(
-    <Fragment>
+    <>
       <div className="d-none d-lg-block">
         <p className="lead">
           El grupo de investigación Inamod realizó un estudio de antropometría fue realizado en Medellín,
@@ -28,6 +27,6 @@ export const TextInitial = () => {
           lo que mejora la selección de ropa y la experiencia de compra.
         </p>
       </div>
-    </Fragment>
+    </>
   )
 }

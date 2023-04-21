@@ -1,4 +1,10 @@
-import {averageMeasure, convertMeasure, bustMeasure, hipMeasure, waistMeasure} from "./model";
+import {
+  averageMeasure, 
+  convertMeasure, 
+  bustMeasure, 
+  hipMeasure, 
+  waistMeasure
+} from "./model";
 
 export const createMeasure = (measure, setTypeOfBody, setShowSide) => {
   const bust = bustMeasure(measure.bust)

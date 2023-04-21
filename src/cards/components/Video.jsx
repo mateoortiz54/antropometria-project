@@ -1,4 +1,4 @@
-import React, {Fragment, useRef, useEffect} from "react";
+import {useRef, useEffect} from "react";
 
 export const Video = ({video, setLoading}) => {
   const vidRef = useRef();
@@ -6,7 +6,7 @@ export const Video = ({video, setLoading}) => {
   useEffect(() => { vidRef.current.play(); },[]);
 
   return (
-    <Fragment>
+    <>
         <video
           ref={vidRef}
           muted
@@ -16,7 +16,7 @@ export const Video = ({video, setLoading}) => {
           className="responsive-video"
           onLoadedData={() => setLoading(false)}
           src={`https://bodies-app.s3.amazonaws.com/videos/antropometria_app/${video}.mp4`}></video>
-    </Fragment>
+    </>
   )
 }
 

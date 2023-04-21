@@ -1,9 +1,12 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
-import {Formulary as Form} from "./Form";
+
+
+
+import {Formulary as Form} from "../components";
 import {useRecoilState} from "recoil";
-import {closedSideBar} from "../measure/states";
+import {closedSideBar} from "../../measure";
 
 export function SideBarMain() {
   const [show, setShow] = useRecoilState(closedSideBar);

@@ -1,9 +1,17 @@
-import React,{Fragment, useState} from 'react'
+import {useState} from 'react'
 import {Button, Form} from 'react-bootstrap';
-import {validateIsNumber} from "../measure/Utils";
-import {createMeasure} from "../measure/controller";
 import {useRecoilState} from "recoil";
-import {closedSideBar, myTypeOfBody} from "../measure/states";
+
+
+import {
+  validateIsNumber, 
+  createMeasure, 
+  closedSideBar, 
+  myTypeOfBody
+} from "../../measure";
+
+
+
 export const Formulary = () => {
 
 
@@ -44,7 +52,7 @@ export const Formulary = () => {
   }
 
   return(
-    <Fragment>
+    <>
       <Form onSubmit={handleSubmit}>
 
         <Form.Group className="mb-3" controlId="formBust">
@@ -96,6 +104,6 @@ export const Formulary = () => {
         </div>
 
       </Form>
-    </Fragment>
+    </>
   )
 }

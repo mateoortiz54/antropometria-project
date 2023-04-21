@@ -188,6 +188,20 @@ body, html {
   opacity: 1;
   transform: translateY(-5px);
 }
+.card .info p{
+  display: none;
+}
+
+.card:hover .info p{
+  display: block;
+}
+.button-info{
+  visibility: hidden;
+}
+
+.card:hover .button-info{
+  visibility: visible;
+}
 
 .card :before {
   content: "";
@@ -252,6 +266,9 @@ body, html {
   .spaceFocus{
     width: 80%;
   }
+  .videoCard{
+    transform: translateY(-40px);
+  }
  }
  @media (min-width:768px) {
   .container,
@@ -268,6 +285,9 @@ body, html {
   .spaceFocus{
     width: 90%;
   }
+  .videoCard{
+    transform: translateY(-40px);
+  } 
 
   /* .card .text-info {
     opacity: 0;
@@ -293,9 +313,9 @@ body, html {
     width: 95%;
   }
   .videoCard{
-    transform: translateY(-200px);
+    transform: translateY(-40px);
   }
- }
+ }      
  @media (min-width:1200px) {
   .container,
   .container-lg,
@@ -308,7 +328,7 @@ body, html {
     width: 30%;
   }
   .videoCard{
-    transform: translateY(-150px);
+    transform: translateY(-50px);
   }
   .spaceLeft{
     width: 10%;
@@ -337,11 +357,9 @@ body, html {
  }
 
 /*---------------------------------------------Termina css de las cards--------------------------------------*/
-.ModalHeader{
-  background-color: antiquewhite;
-}
-.ModalBody{
-  background-color: antiquewhite;
+
+.modal-content{
+  background-image: url('./assets/fondo.png');  
 }
 
 .titleStone{
@@ -375,21 +393,108 @@ body, html {
 
 .grid-container{
   display: grid;
-  grid-template-columns: auto auto auto auto auto auto;
+  grid-template-columns: auto auto auto auto;
   background-color: #2196F3;
   gap: 10px;
   padding: 10px;
 }
 
 .grid-container div{
-  background-color: rgba(255, 255, 255, 0.8);
+  
   text-align: center;
   padding: 20px ;
   font-size: 30px;
 }
 .item7{
   /*empieza en la fila 1, termina en la fila 8 (restandole uno), de width empieza en la column 2 y termina 6 (restandole 1)*/
-  grid-area: 1/2/8/6;
+  grid-area: 1/2/8/4;
+  width: 300px;
+  height: 500px;
+
 }
+.containerPorcentajes{
+  display: flex;
+  justify-content: end;
+}
+.porcentajes{
+
+  width: 90%;
+  background-color: transparent;
+  display: flex;
+  text-align: center;
+}
+
+.porcentajes div img{
+
+  background-color: transparent;
+  width: 300px;
+  height: 500px;
+}
+
+.containerCintura, .divBustoCadera{
+  width: 20%;
+}
+.divImg{
+  display:inline-block;
+  margin-left:auto;
+  margin-right:auto;
+  width: 60%;
+}
+/* .containerCintura, .divBustoCadera, .divImg{
+  width: 33%;
+} */
+
+
+.divBustoCadera{
+  display: flex;
+  flex-direction: column;
+}
+
+.divBusto{
+  display: flex;
+  height: 50%;
+  justify-content: end;
+  align-items: center;
+}
+
+.divCadera{
+  display: flex;
+  height: 50%;
+  justify-content: end;
+
+}
+
+/* .divCintura{
+  
+  display: flex;
+  justify-content: start;
+  height: 100%;
+  align-items: center;
+
+} */
+
+.containerCintura{
+  display: flex;
+  /* height: 100%; */
+}
+.divCintura{
+  display: flex;
+  justify-content: start;
+  height: 75%;
+  align-items: center;
+}
+
+/* ------------------------------------component caracteristics----------------------------------------- */
+.componentCaracteristic{
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+  margin-left: 20%;
+  margin-right: 20%;
+
+}
+
+
+
 
 
