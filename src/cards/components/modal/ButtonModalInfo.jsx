@@ -36,7 +36,7 @@ export const ButtonModalInfo = ({infoStoneModal}) => {
   return (
     <Card className="cardCBC text-center">
         <Card.Header>
-          <Nav variant="tabs" defaultActiveKey="#1">
+          <Nav variant="tabs" defaultActiveKey="#0">
             {
               keysStone.map((stone, i)=>
                 
