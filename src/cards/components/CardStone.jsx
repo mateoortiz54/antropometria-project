@@ -25,5 +25,5 @@ export const CardStone = ({stone}) => {
                     <source src={`${stone.data.video360}`} type='video/mp4'></source>
                 </video>
         </Card>
-    );
+    );  
 };
