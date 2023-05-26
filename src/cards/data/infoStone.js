@@ -1,3 +1,11 @@
+import {ambarVideo,
+    amatistaVideo,
+    esmeraldaVideo,
+    lapislazuliVideo,
+    perlaVideo,
+    rubiVideo,
+    topacioVideo} from '../../../public/videoStone'
+
 export const infoStone = [
     {
         title:'Perla',
@@ -33,7 +41,7 @@ export const infoStone = [
             
         },
         data:{
-            video360: '../../../public/videoStone/perla360.mp4'
+            video360: perlaVideo.default
         },
     },
 
@@ -82,7 +90,7 @@ export const infoStone = [
             
         },
         data:{
-            video360: '../../../public/videoStone/ambar360.mp4'
+            video360: ambarVideo.default
         },
     },
 
@@ -121,7 +129,7 @@ export const infoStone = [
             
         },
         data:{
-            video360: '../../../public/videoStone/amatista360.mp4'
+            video360: amatistaVideo.default
         },
         
     },
@@ -180,7 +188,7 @@ export const infoStone = [
             
         },
         data:{
-            video360: '../../../public/videoStone/esmeralda360.mp4'
+            video360: esmeraldaVideo.default
         },
     },
 
@@ -209,7 +217,7 @@ export const infoStone = [
             
         },
         data:{
-            video360: '../../../public/videoStone/lapislazuli360.mp4'
+            video360: lapislazuliVideo.default
         },
     },
 
@@ -268,7 +276,7 @@ export const infoStone = [
             
         },
         data:{
-            video360: '../../../public/videoStone/rubi360.mp4'
+            video360: rubiVideo.default
         },       
     },
 
@@ -317,7 +325,7 @@ export const infoStone = [
             
         },
         data:{
-            video360: '../../../public/videoStone/topacio360.mp4'
+            video360: topacioVideo.default
         },
     }
 ];
