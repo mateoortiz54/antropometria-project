@@ -24,7 +24,7 @@ export const StoneMain = ({stone, url, title}) => {
   const [loading, setLoading] = useState(true);
   const [showNav, setShowNav] = useState(false);
 
-  const[showModal, setShowModal] = useState(false )
+  const[showModal, setShowModal] = useState(false)
 
   const [showSide, setShowSide] = useRecoilState(closedSideBar);
 
@@ -51,7 +51,7 @@ export const StoneMain = ({stone, url, title}) => {
       <Modal show={showModal} fullscreen={true} onHide={() => setShowModal(false)}>
         <Modal.Header closeButton></Modal.Header>
         <Modal.Body>
-          <ModalInfo information={information} title={title} />
+          <ModalInfo information={information} title={title} url={url} />
         </Modal.Body>
       </Modal>
       

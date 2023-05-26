@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import { Button, Card, Nav } from 'react-bootstrap'
 
-export const ButtonModalInfo = ({infoStoneModal}) => {
+export const ButtonModalInfo = ({infoStoneModal, url}) => {
 
   let keysStone = []
   
   
   if (infoStoneModal.recomendaciones.general){
-    keysStone.push({'title': 'Información general', 'keysBusto': Object.keys(infoStoneModal.recomendaciones.general)})
+    keysStone.push({'title': 'Información general', 'type': ``, 'keys': (infoStoneModal.recomendaciones.general)})
   }else{
     if (infoStoneModal.recomendaciones.busto){
       keysStone.push({'title': `Busto`, 'type': `${infoStoneModal.recomendaciones.busto.tipo}`, 'keys': (infoStoneModal.recomendaciones.busto)})
@@ -34,35 +34,40 @@ export const ButtonModalInfo = ({infoStoneModal}) => {
   }
 
   return (
-    <Card className="cardCBC text-center">
-        <Card.Header>
+    <Card className="cardCBC">
+        <Card.Header > 
           <Nav variant="tabs" defaultActiveKey="#0">
             {
               keysStone.map((stone, i)=>
                 
-                <Nav.Item>
-                  <Nav.Link href={`#${i}`} onClick={()=>showInfo(stone.keys, stone.title)}>{`${stone.title}`}</Nav.Link>
+                <Nav.Item key={i}  >
+                  <Nav.Link href={`#${i}`}   onClick={()=>showInfo(stone.keys, stone.title)}>{`${stone.title}`}</Nav.Link>
                 </Nav.Item> 
               )
             }
           </Nav>
-        </Card.Header>
+        </Card.Header>  
         <Card.Body>
-          <Card.Title style={{fontSize:'27px'}}>{titleStone}</Card.Title>
-          <Card.Text>
-          <ul >
-            {
-              Object.values(valueStone).map(e => {
-                if (e.length > 10) {
-                  return <li style={{fontSize: '20px'}}>{e}</li> 
-                }
-                
-              })
-            }
-          </ul>
+          <Card.Title className='text-center' style={{fontSize:'27px'}}>{titleStone}</Card.Title>
+          <ul>
+            <Card.Text>
             
-          </Card.Text>
-          <Button variant="primary">Ver en PDF...</Button>
+              {
+                Object.values(valueStone).map((e, i ) => {
+                  if (e.length > 10) {
+                    return <li key={i} style={{fontSize: '20px'}}>{e}</li> 
+                  }
+                  
+                })
+              }
+              <div style={{'display': 'flex', 'justifyContent': 'center', 'marginTop': 15}}>
+                {/* <Button variant="primary">Ver en PDF...</Button> */}
+                <Button href={url} target="_blank" variant="outline-dark">Ver en PDF...</Button>
+
+              </div>
+            </Card.Text>
+          </ul>
+          
         </Card.Body>
         {/* <Card.Footer className="text-muted">2 days ago</Card.Footer> */}
     </Card>

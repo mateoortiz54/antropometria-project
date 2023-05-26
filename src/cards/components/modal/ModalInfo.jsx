@@ -2,7 +2,7 @@ import { Accordion } from "react-bootstrap";
 import { ButtonModalInfo } from "./ButtonModalInfo";
 
 
-export const ModalInfo = ({information, title}) => {
+export const ModalInfo = ({information, title, url}) => {
     
    
 
@@ -45,7 +45,7 @@ export const ModalInfo = ({information, title}) => {
           </div>
         </div>
               
-        <ButtonModalInfo infoStoneModal={infoStoneModal}/>
+        <ButtonModalInfo infoStoneModal={infoStoneModal} url={url}/>
           
       </>)
     }
