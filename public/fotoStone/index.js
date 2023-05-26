@@ -1,5 +1,11 @@
 // export {defautlt as Ambar} from '../fotoStone/Ambar- SIN FONDO.png';
 export * as amatistaFoto from '../fotoStone/Amatista- SIN FONDO.png';
+export * as ambarFoto from '../fotoStone/Ambar- SIN FONDO.png';
+export * as esmeraldaFoto from '../fotoStone/Esmeralda- SIN FONDO.png';
+export * as lapislazuliFoto from '../fotoStone/Lapislazuli- SIN FONDO.png';
+export * as rubiFoto from '../fotoStone/Rubí- SIN FONDO.png';
+export * as perlaFoto from '../fotoStone/Perla- SIN FONDO.png';
+export * as topacioFoto from '../fotoStone/Topacio- SIN FONDO.png';
 // export {defautlt as Ambar} from '../fotoStone/Ambar- SIN FONDO.png';
 // export {defautlt as Ambar} from '../fotoStone/Ambar- SIN FONDO.png';
 // export {defautlt as Ambar} from '../fotoStone/Ambar- SIN FONDO.png';

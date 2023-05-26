@@ -1,10 +1,18 @@
 import { Accordion } from "react-bootstrap";
 import { ButtonModalInfo } from "./ButtonModalInfo";
-import {amatistaFoto} from "../../../../public/fotoStone";
+import {amatistaFoto,
+  ambarFoto,
+  esmeraldaFoto,
+  lapislazuliFoto,
+  rubiFoto,
+  perlaFoto,
+  topacioFoto} from "../../../../public/fotoStone";
+
 // import ambarSinFondo from '../../../../public/fotoStone/Amatista- SIN FONDO.png';
 
 export const ModalInfo = ({information, title, url}) => {
   
+  // console.log(fotosSinFondo)
    
 
   const infoStoneModal = information.find(info => info.title == title)
@@ -37,7 +45,17 @@ export const ModalInfo = ({information, title, url}) => {
             </div>
             
             <div className="divImg">
-              <img src={amatistaFoto.default} alt="" />
+              {
+                infoStoneModal.title === 'Perla' ? (<img src={perlaFoto.default} alt="" />) :
+                infoStoneModal.title === 'Amatista' ? (<img src={amatistaFoto.default} alt="" />):
+                infoStoneModal.title === 'Ámbar' ? (<img src={ambarFoto.default} alt="" />) : 
+                infoStoneModal.title === 'Lapislázuli' ? (<img src={lapislazuliFoto.default} alt="" />) :
+                infoStoneModal.title === 'Esmeralda' ? (<img src={esmeraldaFoto.default} alt="" />) :
+                infoStoneModal.title === 'Topacio' ? (<img src={topacioFoto.default} alt="" />) :
+                infoStoneModal.title === 'Rubí' ? (<img src={rubiFoto.default} alt="" />) : 
+                (<img src={'rubiFoto.default'} alt="" />) 
+              }
+              
             </div>
             
             <div className="containerCintura">
