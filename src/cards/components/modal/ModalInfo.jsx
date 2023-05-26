@@ -22,7 +22,7 @@ export const ModalInfo = ({information, title, url}) => {
 
         <Accordion flush>
           <Accordion.Item style={{ backgroundColor: 'transparent' }} eventKey="0">
-            <Accordion.Header><strong>Descripción</strong> </Accordion.Header>
+            <Accordion.Header><strong>Descripción y mas</strong> </Accordion.Header>
             <Accordion.Body style={{ fontSize: '30px' }}>
               <p>{infoStoneModal.description}</p>
             </Accordion.Body>
