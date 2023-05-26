@@ -1,6 +1,6 @@
 import { Accordion } from "react-bootstrap";
 import { ButtonModalInfo } from "./ButtonModalInfo";
-
+import ambarSinFondo from '../../../../public/fotoStone/Ambar- SIN FONDO.png';
 
 export const ModalInfo = ({information, title, url}) => {
     
@@ -36,7 +36,7 @@ export const ModalInfo = ({information, title, url}) => {
             </div>
             
             <div className="divImg">
-              <img src="../../public/fotoStone/Ambar- SIN FONDO.png" alt="" />
+              <img src={ambarSinFondo} alt="" />
             </div>
             
             <div className="containerCintura">
