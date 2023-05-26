@@ -1,11 +1,10 @@
 import { Accordion } from "react-bootstrap";
 import { ButtonModalInfo } from "./ButtonModalInfo";
-import { Amatista } from "../../../../public/fotoStone";
+import {amatistaFoto} from "../../../../public/fotoStone";
 // import ambarSinFondo from '../../../../public/fotoStone/Amatista- SIN FONDO.png';
 
-
 export const ModalInfo = ({information, title, url}) => {
-    
+  
    
 
   const infoStoneModal = information.find(info => info.title == title)
@@ -38,7 +37,7 @@ export const ModalInfo = ({information, title, url}) => {
             </div>
             
             <div className="divImg">
-              <img src={Amatista} alt="" />
+              <img src={amatistaFoto.default} alt="" />
             </div>
             
             <div className="containerCintura">
